@@ -1,8 +1,8 @@
 # ISO to GOD Converter
 
-A simple app that converts Xbox 360 ISOs into the Games-on-Demand format your Xbox can read straight off a hard drive. Pick your files, pick a folder, click Convert.
+A simple app coded with Claude that adds a GUI to the existing conversion tool for game ISOs into the Games-on-Demand format your Xbox can read straight off a hard drive. Pick your files, pick a folder, click Convert.
 
-Works on macOS, Windows, and Linux.
+Works on macOS, Windows(untested), and Linux(untested).
 
 ## Download
 

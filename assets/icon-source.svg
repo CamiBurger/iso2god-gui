@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b9dff"/>
+      <stop offset="100%" stop-color="#0071e3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="1024" rx="226" fill="url(#bg)"/>
+
+  <!-- optical disc -->
+  <circle cx="512" cy="512" r="300" fill="#ffffff"/>
+  <circle cx="512" cy="512" r="300" fill="none" stroke="#dbe9fb" stroke-width="10"/>
+  <circle cx="512" cy="512" r="205" fill="none" stroke="#dbe9fb" stroke-width="10"/>
+  <circle cx="512" cy="512" r="70" fill="#0071e3"/>
+  <circle cx="512" cy="512" r="26" fill="#ffffff"/>
+
+  <!-- convert arrow badge -->
+  <circle cx="770" cy="770" r="130" fill="#ffffff"/>
+  <path d="M718 770 h84 M760 728 l42 42 l-42 42" fill="none" stroke="#0071e3" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

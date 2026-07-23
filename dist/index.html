@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISO to GOD Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Setup view: first-run welcome + default options -->
+  <section id="setup-view" class="view">
+    <h1 id="setup-title">Conversion Settings</h1>
+    <p id="setup-intro" class="hint">Set your default options below.</p>
+
+    <label class="field">
+      <span>Worker threads</span>
+      <input id="thread-count" type="number" min="1" step="1" />
+      <span id="thread-hint" class="hint"></span>
+    </label>
+
+    <fieldset class="field">
+      <legend>Trim mode</legend>
+      <label class="radio">
+        <input type="radio" name="trim" id="trim-from-end" checked />
+        From End (default) — trim unallocated space
+      </label>
+      <label class="radio">
+        <input type="radio" name="trim" id="trim-none" />
+        None — keep full ISO size
+      </label>
+    </fieldset>
+
+    <fieldset class="field">
+      <legend>Ask for these options</legend>
+      <label class="radio">
+        <input type="radio" name="freq" id="freq-every-time" />
+        Every time I run this program
+      </label>
+      <label class="radio">
+        <input type="radio" name="freq" id="freq-once" checked />
+        Just once — use these defaults from now on
+      </label>
+    </fieldset>
+
+    <div class="actions">
+      <button id="setup-cancel" class="secondary" hidden>Cancel</button>
+      <button id="setup-save" class="primary">Save</button>
+    </div>
+  </section>
+
+  <!-- Main view: pick files, pick destination, convert -->
+  <section id="main-view" class="view">
+    <header class="topbar">
+      <h1>ISO to GOD Converter</h1>
+      <button id="open-settings" class="icon-button" title="Settings" aria-label="Settings">⚙</button>
+    </header>
+
+    <div class="field">
+      <button id="pick-files" class="secondary full">Choose ISO Files…</button>
+      <span id="files-summary" class="hint">No files selected</span>
+    </div>
+
+    <div class="field">
+      <button id="pick-dest" class="secondary full">Choose Destination Folder…</button>
+      <span id="dest-summary" class="hint">No destination selected</span>
+    </div>
+
+    <div class="actions">
+      <button id="convert-btn" class="primary full" disabled>Convert</button>
+    </div>
+
+    <div id="progress-area" class="progress-area" hidden>
+      <div class="progress-bar-track">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+      <p id="progress-label" class="hint"></p>
+    </div>
+
+    <div id="result-area" class="hint" hidden></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
